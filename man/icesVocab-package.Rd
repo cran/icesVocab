@@ -2,12 +2,12 @@
 % Please edit documentation in R/icesVocab-package.R
 \docType{package}
 \name{icesVocab-package}
-\alias{icesVocab}
 \alias{icesVocab-package}
-\title{ICES Vocabularies Database Web Services}
+\alias{icesVocab}
+\title{Vocabularies Database Web Services}
 \description{
-R interface to access the RECO POX web services of the ICES (International
-Council for the Exploration of the Sea) Vocabularies database.
+R interface to access the web services of the ICES Vocabularies database of
+reference codes.
 }
 \details{
 \emph{Get full tables:}
@@ -21,10 +21,11 @@ Council for the Exploration of the Sea) Vocabularies database.
   \code{\link{findAphia}} \tab species code
 }
 }
+\references{
+ICES Vocabularies database: \url{http://vocab.ices.dk}.
+
+ICES Vocabularies web services: \url{http://vocab.ices.dk/services/POX.aspx}.
+}
 \author{
 Colin Millar and Arni Magnusson.
 }
-\references{
-ICES Vocabularies database: \url{http://vocab.ices.dk/}.
-}
-

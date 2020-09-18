@@ -1,6 +1,18 @@
 
-#' @importFrom utils download.file
 readVocab <- function(url) {
+  res <- try(readVocab_internal(url), silent = TRUE)
+
+  if (inherits(res, "try-error")) {
+
+    warning(attr(res, "condition")$message)
+    return ("")
+  }
+
+  res
+}
+
+#' @importFrom utils download.file
+readVocab_internal <- function(url) {
 
   # try downloading first:
   # create file name
@@ -45,6 +57,11 @@ readVocab <- function(url) {
 parseVocab <- function(x) {
   # parse the xml text string suppplied by the Datras webservice
   # returning a dataframe
+
+  if (x == "") {
+    return(data.frame())
+  }
+
   x <- xmlParse(x)
 
   # get root node
@@ -139,8 +156,6 @@ checkVocabWebserviceOK <- function() {
 simplify <- function(x) {
   # from Arni's toolbox
   # coerce object to simplest storage mode: factor > character > numeric > integer
-  owarn <- options(warn = -1)
-  on.exit(options(owarn))
   # list or data.frame
   if (is.list(x)) {
     for (i in seq_len(length(x)))

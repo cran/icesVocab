@@ -1,7 +1,7 @@
-1184d5ef9c198d07aa7877ec898bc305 *DESCRIPTION
+c6116face92187021d413f686a0d7748 *DESCRIPTION
 1493c4a7dac8573b70c22dcacaee3bbe *NAMESPACE
-8e3791ad5b8e4c0d09275efa4399cf2a *NEWS.md
-ebfc725afd4e28ea68b08090d86f3db9 *R/findAphia.R
+7798afde9f61b855d65f0df1d64719e0 *NEWS.md
+211f102f1f548de5e8a1c095fd808c44 *R/findAphia.R
 8638a165e432b3be8d1a065acb6c22af *R/findCode.R
 cd1a1cdfcad77a1c8b68ddebde081eb1 *R/findCodeType.R
 c90ca82957aff9e053aa9418a94de51a *R/getCodeDetail.R
@@ -9,12 +9,12 @@ c90ca82957aff9e053aa9418a94de51a *R/getCodeDetail.R
 0173a588b29c8fa7bfcd0c659888bfe6 *R/getCodeTypeList.R
 0f422d40a64ecd986cc17f88a00be6ce *R/icesVocab-package.R
 c603d36be923bd83415fadfde473e959 *R/utilities.R
-f1e059ecaa8d8ea84e7f33914ea9b070 *man/findAphia.Rd
+dcdec9417c1901eb326f7d1cc3bb1072 *man/findAphia.Rd
 93e7d65b1c98de67d5201808c1a1864c *man/findCode.Rd
 976ed7e56ba6e3dc1c6608cf0291a7dd *man/findCodeType.Rd
 03ab0076abac61641225774b089dc10b *man/getCodeDetail.Rd
 7f0cd02ec81796e959ff0899fd093dce *man/getCodeList.Rd
 076696241e82f3dbaa5aa84cee215029 *man/getCodeTypeList.Rd
 2a5cbd5e5e9e7a2e91fdd99f622c1e94 *man/icesVocab-package.Rd
-1aba5547efbac9a09d7d712a78c7c9ed *tests/testthat.R
-6925c5cdd20f1d165d3f1a9d302a8ecb *tests/testthat/test-findAphia.R
+608707118d7ad87e6b3f7dd44b4b48d6 *tests/testthat.R
+66ad255091e57f3bace04a9c707d0551 *tests/testthat/test-findAphia.R

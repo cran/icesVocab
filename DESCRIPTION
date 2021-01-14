@@ -1,7 +1,7 @@
 Package: icesVocab
 Title: ICES Vocabularies Database Web Services
-Date: 2020-09-28
-Version: 1.1.8
+Date: 2021-01-14
+Version: 1.1.9
 Authors@R: c(person("Colin", "Millar", email = "colin.millar@ices.dk",
   role = c("aut","cre")), person("Arni", "Magnusson", role = "aut"))
 Imports: utils, xml2
@@ -15,9 +15,9 @@ Encoding: UTF-8
 BugReports: https://github.com/ices-tools-prod/icesVocab/issues
 Suggests: testthat
 NeedsCompilation: no
-Packaged: 2020-09-28 09:13:38 UTC; colin
+Packaged: 2021-01-14 22:26:56 UTC; colin
 Author: Colin Millar [aut, cre],
   Arni Magnusson [aut]
 Maintainer: Colin Millar <colin.millar@ices.dk>
 Repository: CRAN
-Date/Publication: 2020-09-28 11:30:05 UTC
+Date/Publication: 2021-01-15 00:00:02 UTC

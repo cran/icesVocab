@@ -20,6 +20,7 @@
 #' @author Arni Magnusson.
 #'
 #' @examples
+#' \donttest{
 #' findAphia("cod")
 #' findAphia("Gadus morhua", latin = TRUE)
 #'
@@ -29,7 +30,7 @@
 #' # Regular expressions
 #' findAphia("ray", regex = TRUE, full = TRUE)
 #' findAphia("Sebastes", latin = TRUE, regex = TRUE, full = TRUE)
-#'
+#' }
 #' @export
 
 findAphia <- function(species, latin = FALSE, regex = FALSE, full = FALSE) {
@@ -56,7 +57,12 @@ findAphia <- function(species, latin = FALSE, regex = FALSE, full = FALSE) {
   }
 
   select <- unlist(lapply(species, grepsafe, description, ignore.case = TRUE))
-  worms <- worms[select, ]
 
-  if (full) worms else worms$Key
+  worms <- worms[select, ]
+  if (full) {
+    worms
+  } else {
+    # fix unexpected behaviour in r-patched-solaris-x86 (returns NULL not character(0))
+    if (length(select)) worms$Key else character(0)
+  }
 }

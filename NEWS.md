@@ -1,3 +1,6 @@
+# icesVocab 1.1.9 (2020-10-26)
+* Keys for all codes are always characters
+
 # icesVocab 1.1.8 (2020-09-28)
 * internal bug fixes changes
 

@@ -1,3 +1,12 @@
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
+# icesVocab 1.2.0 (2022-02-10)
+
+* internal bug fixes
+
+# icesVocab 1.1.10 (2021-09-13)
+* Use read_xml to read directly from url to avoid local encodings when using download.file
+
 # icesVocab 1.1.9 (2020-10-26)
 * Keys for all codes are always characters
 

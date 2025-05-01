@@ -2,7 +2,7 @@
 #'
 #' Look up a key for a given code and code type.
 #'
-#' @param code_type a search string for a code type, e.g. SpecWorms, or simply worms.
+#' @param code_type a search string for a code type, e.g. SpecWoRMS, or simply worms.
 #' @param code a search string for a code, e.g. a species name, cod, or ship name, Clupea.
 #' @param regex whether to match as a regular expression.
 #' @param full whether to return a data frame.
@@ -18,7 +18,7 @@
 #' \code{\link{icesVocab-package}} gives an overview of the package.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' findCode("aphia", "cod")
 #'
 #' # Multiple matches

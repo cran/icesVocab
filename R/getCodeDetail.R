@@ -14,7 +14,7 @@
 #' \code{\link{icesVocab-package}} gives an overview of the package.
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Species code 101170 - Myxine glutinosa
 #' getCodeDetail("SpecWoRMS", 101170)
 #'
@@ -23,22 +23,42 @@
 #'
 #' getCodeDetail("SpecWoRMS", 126437)
 #'
-#' # get info for had-43
+#' # get info for had-34
 #' getCodeDetail("ICES_StockCode", "had-34")
 #' }
 #' @export
 
 getCodeDetail <- function(code_type, code) {
-  message("The output from this function is developing.  please do not rely on the current output format")
-
-  # form url
-  url <-
-    sprintf("https://vocab.ices.dk/services/pox/GetCodeDetail/%s/%s", code_type, code)
 
   # read url contents
-  xml <- readVocab(url)
-  # parse the text string returning a dataframe
-  out <- parseVocabDetail(xml)
+  out <-
+    vocab_get_cached(
+      vocab_api(
+        sprintf("CodeDetail/%s/%s", code_type, code)
+      )
+    )
 
-  out
+  # convert to detail structure
+  names <- c("id", "guid", "key", "description", "longDescription", "modified")
+
+  # convert names
+  convert_names <- function(x) {
+    names(x) <- CamelCase(names(x))
+    x
+  }
+
+  # return
+  list(
+    detail = convert_names(data.frame(out[names])),
+    parents =
+      list(
+        code_types = convert_names(out$parentRelation$codeType[names]),
+        codes = convert_names(out$parentRelation$code[names])
+      ),
+    children =
+      list(
+        code_types = convert_names(out$childRelation$codeType[names]),
+        codes = convert_names(out$childRelation$code[names])
+      )
+  )
 }
